@@ -1,8 +1,8 @@
 .add-button{
     position: fixed; /*El boton queda flotante sobre el contenido*/
 
-    bottom: 30px;/*Separaciòn desde abajo*/
-    right: 40px;/*Separaciòn desde la derecha*/
+    bottom: 30px;/*Separación desde abajo*/
+    right: 40px;/*Separación desde la derecha*/
     background-color: cornflowerblue;/*Color del fondo del boton*/
     color: white;/*color del icono*/
     border-radius: 50%; /*para redondear el boton*/
