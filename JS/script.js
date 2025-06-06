@@ -32,7 +32,7 @@ function MostrarRegistros(datos){
             <td>${persona.correo}</td>
             <td>
             <button>Editar</button>
-            <button>Eliminar</button>
+            <button onclick = "EliminarPersona(${persona.id})">Eliminar</button>
             </td>
         </tr>
         `;
@@ -93,3 +93,21 @@ document.getElementById("frmAgregar").addEventListener("submit", async e => {
         alert("No se resgistro nada hey");
     }
 });
+
+//Funciòn para borrar registros
+async function EliminarPersona(id){
+    const confirmacion = confirm("¿Quieres eliminar el registro?");
+
+    //Validamos si el usuario eligio 'Aceptar'
+    if(confirmacion){
+        await fetch(`${API_URL}/${id}`, {
+            method : "DELETE"
+        }); //Llamada al endpoint
+
+        //Recargar la tabla para actualizar la vista
+        ObtenerRegistros();
+
+
+
+    }
+}
